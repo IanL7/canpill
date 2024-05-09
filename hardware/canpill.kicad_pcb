@@ -9,7 +9,8 @@
     (title "canpill")
     (date "2024-02-04")
     (rev "1")
-    (company "yarntheory")
+    (company "Ian Lodes")
+    (comment 1 "(Adapted from a design by Philip Salmony (Phil's Lab))")
   )
 
   (layers
