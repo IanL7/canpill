@@ -1,6 +1,8 @@
 # canpill
 Can pill is a basic development board based on Phil's Lab stm32 blue pill adaptation (https://www.youtube.com/watch?v=aVUqaB0IMh4)
 
+This repository contains the kicad project files for the board.
+
 ## Image
 ![](images/canpill.heic)
 
