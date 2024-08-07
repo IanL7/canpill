@@ -1,0 +1,5 @@
+/Users/yarntheory/Desktop/Engineering/Personal/canpill/software/canpill_test/build/Debug/CMakeFiles/canpill_test.dir
+/Users/yarntheory/Desktop/Engineering/Personal/canpill/software/canpill_test/build/Debug/CMakeFiles/edit_cache.dir
+/Users/yarntheory/Desktop/Engineering/Personal/canpill/software/canpill_test/build/Debug/CMakeFiles/rebuild_cache.dir
+/Users/yarntheory/Desktop/Engineering/Personal/canpill/software/canpill_test/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+/Users/yarntheory/Desktop/Engineering/Personal/canpill/software/canpill_test/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "usb_device.h": "c"
+    },
+    "cortex-debug.gdbPath": "/opt/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/arm-none-eabi-gdb",
+    "cortex-debug.JLinkGDBServerPath": "/Applications/SEGGER/JLink_V798a/JLinkGDBServerCLExe",
+    "cortex-debug.stutilPath": null
+}

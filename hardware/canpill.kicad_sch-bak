@@ -5,10 +5,11 @@
   (paper "A4")
 
   (title_block
-    (title "canpill")
+    (title "canpill ")
     (date "2024-02-04")
     (rev "1")
-    (company "yarntheory (based on a design by Phil's Lab)")
+    (company "Ian Lodes")
+    (comment 1 "(Adapted from a design by Philip Salmony (Phil's Lab))")
   )
 
   (lib_symbols
@@ -4132,7 +4133,7 @@
     (uuid b5a72f0b-d346-4933-bcc3-e70c73344215)
   )
 
-  (wire (pts (xy 152.4 101.6) (xy 160.02 101.6))
+  (wire (pts (xy 151.13 101.6) (xy 160.02 101.6))
     (stroke (width 0) (type default))
     (uuid b5e13774-e976-48f6-abce-5f692d6dcb53)
   )
@@ -4490,7 +4491,7 @@
     (stroke (width 0) (type default))
     (uuid fa6d3f6d-936c-47ba-a864-e851b497cd31)
   )
-  (wire (pts (xy 152.4 90.17) (xy 152.4 91.44))
+  (wire (pts (xy 151.13 90.17) (xy 151.13 91.44))
     (stroke (width 0) (type default))
     (uuid faf8f76e-30e5-44bd-8c9c-e5bcbf01dbd1)
   )
@@ -4507,7 +4508,7 @@
     (stroke (width 0) (type default))
     (uuid fc45e39a-7a3c-4755-a57b-17f22edef69a)
   )
-  (wire (pts (xy 152.4 101.6) (xy 152.4 99.06))
+  (wire (pts (xy 151.13 101.6) (xy 151.13 99.06))
     (stroke (width 0) (type default))
     (uuid fdc97f74-c5f3-4a88-b194-21949d684e50)
   )
@@ -4555,6 +4556,13 @@
     (effects (font (size 1.27 1.27)) (justify left top))
     (uuid 78da2e37-de72-462e-a273-2b53b88ad1d6)
   )
+  (text_box "D3 and D4 should be low voltage drop (PMEG2010AEB)"
+    (at 167.64 85.09 0) (size 30.48 6.35)
+    (stroke (width 0) (type default))
+    (fill (type color) (color 0 0 0 0))
+    (effects (font (size 1.27 1.27)) (justify left top))
+    (uuid 9374e6c3-c2d0-4247-8ff8-e261cbc52e63)
+  )
   (text_box "+5V from USB connector. Minimum 22uF inp./out. caps.\n"
     (at 80.01 19.05 0) (size 25.4 10.16)
     (stroke (width 0) (type default))
@@ -4563,24 +4571,20 @@
     (uuid 9a6f2bb7-8683-419d-af69-747a1c448e17)
   )
   (text_box "R2 - see app note AN4879. R3 required for USB C protocol. PWR_FLAG indicates to Kicad the net is a pwr source. D4 and D5 - two needed because of dual VBUS pins."
-    (at 167.64 80.01 0) (size 30.48 15.24)
+    (at 121.92 134.62 0) (size 30.48 15.24)
     (stroke (width 0) (type default))
     (fill (type color) (color 0 0 0 0))
     (effects (font (size 1.27 1.27)) (justify left top))
     (uuid c52c3b1a-98f5-4626-8509-ec1063f11df8)
   )
-  (text_box "EDIT later - R6 and R7 are 60R, C16 is 4n7"
-    (at 250.19 54.61 0) (size 29.21 6.35)
+  (text_box "R6 and R7 are 60R, C16 is 4n7. DNP as not all boards need the termination resistance."
+    (at 250.19 50.8 0) (size 29.21 10.16)
     (stroke (width 0) (type default))
     (fill (type color) (color 0 0 0 0))
     (effects (font (size 1.27 1.27)) (justify left top))
     (uuid cf179857-c999-482a-becf-56526a43c3f9)
   )
 
-  (text "PMEG2010AEB,115" (at 156.21 100.33 90)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 13f5ce78-8bb0-441f-979e-ac3c37f526f7)
-  )
   (text "Power Supply" (at 16.51 19.05 0)
     (effects (font (size 2 2) (thickness 0.4) bold) (justify left bottom))
     (uuid 208c89db-d858-4b77-9d40-d6284d32ab27)
@@ -4930,7 +4934,7 @@
     (pin "2" (uuid ab166331-46ef-43f2-a999-ad02093fd61d))
     (pin "3" (uuid 16c1ccc9-6bd7-41bd-b848-fad91b762cff))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "U3") (unit 1)
         )
@@ -4955,7 +4959,7 @@
     )
     (pin "1" (uuid b0b66dbc-0325-466b-8e5c-a2c835bef8e2))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR06") (unit 1)
         )
@@ -4980,7 +4984,7 @@
     )
     (pin "1" (uuid cc9849da-fb17-445f-8cce-a976ce77617a))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "H4") (unit 1)
         )
@@ -5005,7 +5009,7 @@
     )
     (pin "1" (uuid b0f55230-6537-4df3-b244-2ae69fe49b9f))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#FLG01") (unit 1)
         )
@@ -5030,7 +5034,7 @@
     )
     (pin "1" (uuid 9cf7e77d-fd64-4c2b-9a21-6842ff4a33a3))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR038") (unit 1)
         )
@@ -5055,7 +5059,7 @@
     )
     (pin "1" (uuid d5a9f190-b215-41d8-a1ce-90d134519627))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR05") (unit 1)
         )
@@ -5080,7 +5084,7 @@
     )
     (pin "1" (uuid 80a5e1e5-a92a-44a8-8356-3ec4a9ded68e))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR04") (unit 1)
         )
@@ -5105,7 +5109,7 @@
     )
     (pin "1" (uuid 888908e4-ffa6-4ba3-a135-e35df3699351))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR011") (unit 1)
         )
@@ -5130,7 +5134,7 @@
     )
     (pin "1" (uuid 7fa266f6-6a2c-4e20-abc9-4e9d183e82bd))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR03") (unit 1)
         )
@@ -5155,7 +5159,7 @@
     )
     (pin "1" (uuid 767986c9-6a21-4b96-b7c9-08c3ff9966c8))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR041") (unit 1)
         )
@@ -5181,7 +5185,7 @@
     (pin "1" (uuid a01d9f6e-fb51-45d5-85d3-fd711ff2c2be))
     (pin "2" (uuid 7fa27c4b-3f7b-4568-9555-e435139433a0))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R3") (unit 1)
         )
@@ -5206,7 +5210,7 @@
     )
     (pin "1" (uuid 3f988d34-4715-424a-ad9e-e0b4ffb40bfd))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR048") (unit 1)
         )
@@ -5231,7 +5235,7 @@
     )
     (pin "1" (uuid 089605bc-d777-4359-837b-aa638b46b857))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR034") (unit 1)
         )
@@ -5256,7 +5260,7 @@
     )
     (pin "1" (uuid 86062ca8-3c4e-4603-9f35-d76287080a34))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR01") (unit 1)
         )
@@ -5281,7 +5285,7 @@
     )
     (pin "1" (uuid 4e43db17-7b71-4e30-90db-6bcffaf8a4f5))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR012") (unit 1)
         )
@@ -5307,7 +5311,7 @@
     (pin "1" (uuid 651a7320-384d-4c39-8012-24c9d38a6960))
     (pin "2" (uuid 6eab9923-662b-4455-bc96-bb0493d263b7))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R12") (unit 1)
         )
@@ -5332,7 +5336,7 @@
     )
     (pin "1" (uuid a46d5354-1d5a-45ff-a690-ed95d9c5e05c))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR043") (unit 1)
         )
@@ -5376,7 +5380,7 @@
     (pin "8" (uuid 1aa265f4-fa6f-421f-b9b5-88913934bc57))
     (pin "9" (uuid 433cd014-a75c-452a-8da5-27f48c2c52cb))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "J5") (unit 1)
         )
@@ -5402,7 +5406,7 @@
     (pin "1" (uuid d0f9276e-c317-457c-b91d-0d336385b3f2))
     (pin "2" (uuid 0211beab-cdb2-498c-96a6-855550e5ac63))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R8") (unit 1)
         )
@@ -5427,7 +5431,7 @@
     )
     (pin "1" (uuid 16456e5b-f46a-4cb1-a419-6574e08e2836))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR035") (unit 1)
         )
@@ -5452,7 +5456,7 @@
     )
     (pin "1" (uuid 5def2655-73e4-44f8-ad01-3c4f4aada4e1))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "TP2") (unit 1)
         )
@@ -5477,7 +5481,7 @@
     )
     (pin "1" (uuid ab6979df-a920-45e4-b929-cf5a141ac656))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "TP3") (unit 1)
         )
@@ -5502,7 +5506,7 @@
     )
     (pin "1" (uuid 71fdd5cd-8c31-48a0-9f6e-aa10d9588632))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "H1") (unit 1)
         )
@@ -5528,7 +5532,7 @@
     (pin "1" (uuid 547efbcb-2ce9-4096-9b12-9a8a9e90e267))
     (pin "2" (uuid 1efe753f-2302-458c-b683-8e794d4e3cf9))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R10") (unit 1)
         )
@@ -5554,7 +5558,7 @@
     (pin "1" (uuid 5d45fb12-dad6-4067-85a0-bfe1c0eb1fea))
     (pin "2" (uuid e6b6a055-ca13-4a5e-baae-39320c40faff))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R2") (unit 1)
         )
@@ -5580,7 +5584,7 @@
     (pin "1" (uuid 66d7f234-d94e-47e0-b54f-85f9c29bdd21))
     (pin "2" (uuid 245b822e-2d04-4821-b2ec-8c7193b89756))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C3") (unit 1)
         )
@@ -5605,7 +5609,7 @@
     )
     (pin "1" (uuid d22a98a3-d0ea-4aaa-9b03-54301f99d8e4))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "H2") (unit 1)
         )
@@ -5630,7 +5634,7 @@
     )
     (pin "1" (uuid 6356d1ad-1d2d-41d5-91d5-c8f036d75df3))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR031") (unit 1)
         )
@@ -5655,7 +5659,7 @@
     )
     (pin "1" (uuid 20786076-b283-414c-8eed-da1108901fff))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR07") (unit 1)
         )
@@ -5685,7 +5689,7 @@
     (pin "5" (uuid 2901a964-e8a5-45f0-80e1-07ac6dff99a3))
     (pin "6" (uuid 82794638-a653-4469-9000-2064d789135d))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "U2") (unit 1)
         )
@@ -5711,7 +5715,7 @@
     (pin "1" (uuid 09801774-0e00-4dfd-a47b-055744bce45b))
     (pin "2" (uuid 2d44efe9-e249-41d7-9a5b-b60d3d0f8d8d))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C4") (unit 1)
         )
@@ -5737,7 +5741,7 @@
     (pin "1" (uuid 0e7849fb-722f-4a5a-bcb9-e0acb3e98243))
     (pin "2" (uuid e6fba310-d522-41af-b60d-e259276d3a21))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "FB1") (unit 1)
         )
@@ -5762,7 +5766,7 @@
     )
     (pin "1" (uuid 00788d6c-521f-4644-ba75-970f96f11e25))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#FLG03") (unit 1)
         )
@@ -5791,7 +5795,7 @@
     (pin "4" (uuid 73f11350-4bb3-4075-9d78-6c226600bcc2))
     (pin "5" (uuid 51fed5b0-00e2-4720-9352-35404cc69de3))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "U5") (unit 1)
         )
@@ -5816,7 +5820,7 @@
     )
     (pin "1" (uuid bd6425c0-14de-410e-8ced-a29bed99882e))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR023") (unit 1)
         )
@@ -5841,7 +5845,7 @@
     )
     (pin "1" (uuid ea6614e8-ad95-4945-8314-60f35dac85f0))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR013") (unit 1)
         )
@@ -5866,7 +5870,7 @@
     )
     (pin "1" (uuid ec062c3d-230b-43b4-810a-5dd1cafb6ba0))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR021") (unit 1)
         )
@@ -5892,7 +5896,7 @@
     (pin "1" (uuid 01d0dd90-31ee-48be-8bf7-6bf46fdd5cdb))
     (pin "2" (uuid 5adcf7c5-327a-416d-81e7-6539876cdff7))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C2") (unit 1)
         )
@@ -5918,7 +5922,7 @@
     (pin "1" (uuid 5cb2131f-87d8-453a-b656-8953b2b5fbba))
     (pin "2" (uuid 9ddfb452-ceb4-4002-8665-822749cf41d7))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C14") (unit 1)
         )
@@ -5943,7 +5947,7 @@
     )
     (pin "1" (uuid 7cc68638-99f8-4236-a856-15707ae133ce))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR030") (unit 1)
         )
@@ -5968,7 +5972,7 @@
     )
     (pin "1" (uuid 0bf7b47d-020b-4450-ab30-4a2d7606c9db))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR040") (unit 1)
         )
@@ -5993,7 +5997,7 @@
     )
     (pin "1" (uuid d532f527-433a-4090-8fa9-7e2bfdd5f377))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR028") (unit 1)
         )
@@ -6018,7 +6022,7 @@
     )
     (pin "1" (uuid 0b3f5905-725a-4e9b-afd6-c4d450791126))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR029") (unit 1)
         )
@@ -6044,7 +6048,7 @@
     (pin "1" (uuid 7bf0d6cb-ce26-4637-8f6d-774e5d6bf9cf))
     (pin "2" (uuid 72afc7e2-aa98-4832-b2b1-f65d5b19ab81))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "SW2") (unit 1)
         )
@@ -6097,7 +6101,7 @@
     (pin "1" (uuid ccace44f-270c-44c6-9db9-9c25fc7e912b))
     (pin "2" (uuid 2e4de7c5-f588-499b-8f0f-4b6659803605))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "J2") (unit 1)
         )
@@ -6122,7 +6126,7 @@
     )
     (pin "1" (uuid bfeac200-4768-412c-b962-516199e9851d))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR046") (unit 1)
         )
@@ -6148,7 +6152,7 @@
     (pin "1" (uuid f95b1396-e66c-43ea-ab21-3e895926d418))
     (pin "2" (uuid 61e2aa42-7656-419c-8d32-cd5880863dc8))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "D4") (unit 1)
         )
@@ -6173,7 +6177,7 @@
     )
     (pin "1" (uuid 4c7b67ea-901d-4768-86ee-78d28a76ca7e))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR027") (unit 1)
         )
@@ -6198,7 +6202,7 @@
     )
     (pin "1" (uuid d7d88098-0767-47fa-8795-e849e862a20e))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR016") (unit 1)
         )
@@ -6223,7 +6227,7 @@
     )
     (pin "1" (uuid b1693871-1ff8-4a48-ab97-d6d75de6f2ce))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR010") (unit 1)
         )
@@ -6249,7 +6253,7 @@
     (pin "1" (uuid d858b0d4-c3bb-41c3-97b5-82a5ebeb4ce0))
     (pin "2" (uuid 63734434-543c-4392-8fc6-b55cf6ec4641))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C12") (unit 1)
         )
@@ -6274,7 +6278,7 @@
     )
     (pin "1" (uuid e0fe5b55-ca52-47c9-884b-094f7b90a004))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR033") (unit 1)
         )
@@ -6301,7 +6305,7 @@
     (pin "2" (uuid 73049ba0-9d1a-4ec4-88a1-18d9c159b0da))
     (pin "3" (uuid b332c15c-aeeb-4328-85f8-9b3e6e4e6f59))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "SW1") (unit 1)
         )
@@ -6327,7 +6331,7 @@
     (pin "1" (uuid 6881698b-7241-4563-a5f5-2f5c129fbfb0))
     (pin "2" (uuid 9871365b-088f-47d3-b300-1cc8f756d620))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R9") (unit 1)
         )
@@ -6352,7 +6356,7 @@
     )
     (pin "1" (uuid aac82a2b-7604-49b3-841d-e10eec5bb70c))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "H3") (unit 1)
         )
@@ -6377,7 +6381,7 @@
     )
     (pin "1" (uuid 42b810a6-f66f-47d1-aee7-be56cc497aad))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR049") (unit 1)
         )
@@ -6402,7 +6406,7 @@
     )
     (pin "1" (uuid c7bc15db-a30d-42a2-be79-33ee52baeb11))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR032") (unit 1)
         )
@@ -6427,7 +6431,7 @@
     )
     (pin "1" (uuid b5f84e7a-f0a4-418c-a3c5-f94a605199c2))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "TP1") (unit 1)
         )
@@ -6452,7 +6456,7 @@
     )
     (pin "1" (uuid e97f997d-f62f-4bce-b973-8050d00a9f3b))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR022") (unit 1)
         )
@@ -6478,7 +6482,7 @@
     (pin "1" (uuid adbba8e5-2a36-487b-a7b5-e807b76aee7b))
     (pin "2" (uuid e30a54c8-761f-495b-83c4-2a22f38de6ca))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C16") (unit 1)
         )
@@ -6504,7 +6508,7 @@
     (pin "1" (uuid fe1095fa-1893-4ff1-8df5-2ce5e9ded83f))
     (pin "2" (uuid b841fa72-5e82-4354-a2c7-a80a1f775cbd))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R4") (unit 1)
         )
@@ -6529,7 +6533,7 @@
     )
     (pin "1" (uuid 4dc0174b-496d-438c-b740-7ef31543be66))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR026") (unit 1)
         )
@@ -6596,7 +6600,7 @@
     (pin "3" (uuid 5c0448b3-d6c1-42ac-a6ff-7b741adb56d8))
     (pin "4" (uuid 1216269b-c49f-49c2-84e3-b78ac7b813f8))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "J4") (unit 1)
         )
@@ -6621,7 +6625,7 @@
     )
     (pin "1" (uuid 1ca56374-f245-4ada-bbcf-aee51a524320))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR037") (unit 1)
         )
@@ -6646,7 +6650,7 @@
     )
     (pin "1" (uuid 1783c3e4-ed2f-4252-bbb5-7ccb183b1c95))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR020") (unit 1)
         )
@@ -6672,7 +6676,7 @@
     (pin "1" (uuid 90240b98-c912-486b-b470-4dd3f3597ea9))
     (pin "2" (uuid 0f151934-ce0c-4ecf-802f-5708e7af1191))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C15") (unit 1)
         )
@@ -6680,25 +6684,25 @@
     )
   )
 
-  (symbol (lib_id "Device:D_Schottky") (at 152.4 95.25 270) (unit 1)
+  (symbol (lib_id "Device:D_Schottky") (at 151.13 95.25 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a7481308-642f-4d78-93cd-b4605e1b603a)
-    (property "Reference" "D3" (at 148.59 92.71 90)
+    (property "Reference" "D3" (at 147.32 92.71 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "D_Schottky" (at 154.94 96.2025 90)
+    (property "Value" "D_Schottky" (at 153.67 96.2025 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Footprint" "Diode_SMD:D_SOD-523" (at 152.4 95.25 0)
+    (property "Footprint" "Diode_SMD:D_SOD-523" (at 151.13 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 152.4 95.25 0)
+    (property "Datasheet" "~" (at 151.13 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 730f12bf-da33-4758-adfa-3aba45105cf9))
     (pin "2" (uuid 4333599f-22ef-430c-bb2f-2daf1f0c9171))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "D3") (unit 1)
         )
@@ -6724,7 +6728,7 @@
     (pin "1" (uuid db956f2f-0cd8-4bfb-ad5b-152513781127))
     (pin "2" (uuid a7e7a48a-61ba-4a06-8b52-609dcf3ebde7))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C11") (unit 1)
         )
@@ -6750,7 +6754,7 @@
     (pin "1" (uuid 54c05c59-ac5f-4b23-8104-c56bf153dcf2))
     (pin "2" (uuid 0c5d8824-bd43-472f-b616-e1e588f8274b))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R1") (unit 1)
         )
@@ -6776,7 +6780,7 @@
     (pin "1" (uuid ec0bf553-d72c-4087-9fbf-3c4648154ca8))
     (pin "2" (uuid 1292f92c-edc2-463b-94d0-6a11fb226d4f))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C10") (unit 1)
         )
@@ -6802,7 +6806,7 @@
     (pin "1" (uuid d1bc140b-f713-4ac4-8fcb-fe07b433f345))
     (pin "2" (uuid 3defd68f-fc72-4af8-a2dc-6ba807d887a6))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R11") (unit 1)
         )
@@ -6828,7 +6832,7 @@
     (pin "1" (uuid 1ec33a6a-abb5-47e2-b16b-212c64517ff8))
     (pin "2" (uuid bf80abe1-e92e-44cd-b404-88c60e402f46))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C6") (unit 1)
         )
@@ -6853,7 +6857,7 @@
     )
     (pin "1" (uuid f702cb10-4107-4d29-a725-68814654bbf5))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR017") (unit 1)
         )
@@ -6894,7 +6898,7 @@
     (pin "B9" (uuid 17a0f887-8a6a-4847-ab2b-481c7d8ef60e))
     (pin "S1" (uuid 97a75f59-8e86-4225-ac80-86a4ff5bd83a))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "J1") (unit 1)
         )
@@ -6922,7 +6926,7 @@
     (pin "3" (uuid 0cc6e0c2-927e-4b3b-af82-cd0a5f9aaf89))
     (pin "4" (uuid 32225bec-d2f9-4d49-a665-97fafcc88d81))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "Y1") (unit 1)
         )
@@ -6930,24 +6934,24 @@
     )
   )
 
-  (symbol (lib_id "power:+5V") (at 152.4 90.17 0) (unit 1)
+  (symbol (lib_id "power:+5V") (at 151.13 90.17 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c302a9be-4ff8-4a06-ad0f-3198ab555a6f)
-    (property "Reference" "#PWR014" (at 152.4 93.98 0)
+    (property "Reference" "#PWR014" (at 151.13 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+5V" (at 152.4 86.36 0)
+    (property "Value" "+5V" (at 151.13 86.36 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 152.4 90.17 0)
+    (property "Footprint" "" (at 151.13 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 152.4 90.17 0)
+    (property "Datasheet" "" (at 151.13 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 3b9c0d16-212e-4d2b-9595-373c4f9e45a2))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR014") (unit 1)
         )
@@ -6974,7 +6978,7 @@
     (pin "1" (uuid 4d1ef21d-83c5-406b-a125-d0c7165f9268))
     (pin "2" (uuid 210dd854-25d6-45f1-b606-3d8357fbe82f))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "D5") (unit 1)
         )
@@ -7000,7 +7004,7 @@
     (pin "1" (uuid 59a5f82d-7c3a-4db0-ba06-6a65a47581f5))
     (pin "2" (uuid aa114459-aa28-4a63-9e93-00cee5a980d5))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C13") (unit 1)
         )
@@ -7026,7 +7030,7 @@
     (pin "1" (uuid bd88a832-9b8f-4ba2-b473-2006512ecc32))
     (pin "2" (uuid 624188f7-08cd-4059-8c2c-d9ca0a48e747))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C7") (unit 1)
         )
@@ -7051,7 +7055,7 @@
     )
     (pin "1" (uuid 5a0aaa9b-ed0d-4448-b946-3bc4038fb3c0))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR045") (unit 1)
         )
@@ -7077,7 +7081,7 @@
     (pin "1" (uuid 5feaa176-4866-49b0-b8b7-b830d11ff547))
     (pin "2" (uuid 6f616dab-e4c7-4851-80a0-8845c0ab150e))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C8") (unit 1)
         )
@@ -7103,7 +7107,7 @@
     (pin "1" (uuid 33d702e0-6fcf-4ba1-9f48-207e7cb7921e))
     (pin "2" (uuid 0d56b1c3-6a9a-4de3-baf6-1ee647a5b30d))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R0") (unit 1)
         )
@@ -7128,7 +7132,7 @@
     )
     (pin "1" (uuid e19da31e-cf70-45aa-ba94-13c8b3f13952))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR042") (unit 1)
         )
@@ -7154,7 +7158,7 @@
     (pin "1" (uuid 8bd449e3-3d30-4f40-8096-1b770315c36e))
     (pin "2" (uuid 3564d94c-0aea-47eb-aa72-879f37c99966))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R6") (unit 1)
         )
@@ -7180,7 +7184,7 @@
     (pin "1" (uuid 12795556-de23-471a-a781-ca0eaab8ee0e))
     (pin "2" (uuid 33f9ec4f-c961-4dc2-ab7f-de7ceac6cacb))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "D2") (unit 1)
         )
@@ -7220,7 +7224,7 @@
     (pin "8" (uuid 8342fa16-3f38-4755-906f-7a0cb85ffbfd))
     (pin "9" (uuid f92f6b56-460a-423e-9bd8-8a073fe6ef52))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "J6") (unit 1)
         )
@@ -7246,7 +7250,7 @@
     (pin "1" (uuid dd18f31b-f7dc-410a-972c-b04786fcca83))
     (pin "2" (uuid e3f85f61-9cac-48b0-8cd4-e74c2beddecd))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C1") (unit 1)
         )
@@ -7272,7 +7276,7 @@
     (pin "1" (uuid 5978fa77-204a-46f7-bbec-39aec0a3c371))
     (pin "2" (uuid 1b663442-11fb-4c42-a97c-9deb4399a7be))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R5") (unit 1)
         )
@@ -7297,7 +7301,7 @@
     )
     (pin "1" (uuid d5fdbbdc-1be7-4b16-ba76-dcd51979a770))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR039") (unit 1)
         )
@@ -7358,7 +7362,7 @@
     (pin "8" (uuid a54983a8-ef88-4fac-831e-11e0d903aabf))
     (pin "9" (uuid d19baad4-7593-41fa-9388-b29634d7a690))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "J7") (unit 1)
         )
@@ -7383,7 +7387,7 @@
     )
     (pin "1" (uuid ecf87c8f-0e50-43b2-9646-65500677de82))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR019") (unit 1)
         )
@@ -7408,7 +7412,7 @@
     )
     (pin "1" (uuid 7910a2ab-6860-4764-b346-db8733913a6f))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR024") (unit 1)
         )
@@ -7433,7 +7437,7 @@
     )
     (pin "1" (uuid 9fcf533a-22c1-4b48-88ad-724970aac128))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR02") (unit 1)
         )
@@ -7459,7 +7463,7 @@
     (pin "1" (uuid 13a2faae-18a2-4f92-ad3e-e04629e3215d))
     (pin "2" (uuid f8a783f7-7be5-4c3d-a743-67fa38fcb1fc))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C5") (unit 1)
         )
@@ -7484,7 +7488,7 @@
     )
     (pin "1" (uuid 9c7bf3e9-da0a-4f50-b972-5b5e8a54ebce))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR08") (unit 1)
         )
@@ -7510,7 +7514,7 @@
     (pin "1" (uuid 590c595b-0cce-4435-a5e0-99aee2f211d2))
     (pin "2" (uuid 61126dcc-8f4e-47de-b0dd-0d99e6e9c70f))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "R7") (unit 1)
         )
@@ -7535,7 +7539,7 @@
     )
     (pin "1" (uuid 726ea315-0975-4623-8087-3d4abdfc9e25))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR015") (unit 1)
         )
@@ -7560,7 +7564,7 @@
     )
     (pin "1" (uuid 6ea45fc2-3a0b-45bf-a5dd-9973b8d82008))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR036") (unit 1)
         )
@@ -7613,7 +7617,7 @@
     (pin "1" (uuid 4f7a02ef-b59e-42a2-b0cd-ee10768a569f))
     (pin "2" (uuid 624d729d-8a9f-46c8-9c82-e79e0489707d))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "J3") (unit 1)
         )
@@ -7638,7 +7642,7 @@
     )
     (pin "1" (uuid 9412dd4a-3cdb-4dff-bc7c-ebcbf9eac3e1))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR025") (unit 1)
         )
@@ -7663,7 +7667,7 @@
     )
     (pin "1" (uuid ea9dca3e-4777-4021-a3a0-5200c1daf8e5))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR044") (unit 1)
         )
@@ -7688,7 +7692,7 @@
     )
     (pin "1" (uuid 6e7a64ce-525d-497c-852c-b4cc1ad15470))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR047") (unit 1)
         )
@@ -7714,7 +7718,7 @@
     (pin "1" (uuid 88a685d7-cd1b-479f-b495-4fb8a5658731))
     (pin "2" (uuid 45d1887b-38fc-49ee-b6d4-2c466350586d))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "D1") (unit 1)
         )
@@ -7739,7 +7743,7 @@
     )
     (pin "1" (uuid 17d0687a-218a-4f8d-bce9-dbe3bfbb5729))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR09") (unit 1)
         )
@@ -7764,7 +7768,7 @@
     )
     (pin "1" (uuid f210061e-449e-4078-8e72-87a90e622b3a))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#PWR018") (unit 1)
         )
@@ -7836,7 +7840,7 @@
     (pin "8" (uuid e42e26ae-ae63-4750-b437-135f21f6f9cf))
     (pin "9" (uuid 790a44cc-5674-4370-b4d4-e5c839ca2b63))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "U1") (unit 1)
         )
@@ -7868,7 +7872,7 @@
     (pin "7" (uuid e1634aef-56e6-46dc-93ae-7b0d812859d3))
     (pin "8" (uuid 7945024b-267a-42eb-b0d2-b018f860572d))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "U4") (unit 1)
         )
@@ -7893,7 +7897,7 @@
     )
     (pin "1" (uuid 54e01b72-4820-4400-8893-8fbbcef42af6))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "#FLG02") (unit 1)
         )
@@ -7919,7 +7923,7 @@
     (pin "1" (uuid 2d20d794-ce41-4087-89be-0a8981a8ec15))
     (pin "2" (uuid e6b5e2bd-782a-415a-bb82-741e293d6887))
     (instances
-      (project "STM32_BluePill"
+      (project "canpill"
         (path "/5e2f4299-ac0c-4237-81d7-3a80b30bbe6f"
           (reference "C9") (unit 1)
         )
